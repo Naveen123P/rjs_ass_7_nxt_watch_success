@@ -1,0 +1,17 @@
+.thumbnail {
+  height: 200px;
+}
+
+@media screen and (min-width: 576px) {
+  .trend-div {
+    display: flex;
+  }
+  .trend-thumbnail {
+    min-width: 300px;
+    max-width: 400px;
+    margin-right: 1rem;
+  }
+  .profile {
+    display: none;
+  }
+}

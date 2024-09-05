@@ -1,0 +1,42 @@
+.react-player-bg {
+  width: 100%;
+  height: 250px;
+}
+.react-player {
+  width: 100%;
+}
+
+.video-content {
+  padding: 2rem 1rem 2rem 1rem;
+}
+.likes-bg {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0rem 1rem 0rem;
+}
+.icon {
+  margin-right: 0.5rem;
+}
+.profile-bg {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.channel-bg {
+  margin: 0px;
+  padding: 0%;
+}
+.size-medium {
+  font-size: medium;
+}
+
+@media screen and (min-width: 768px) {
+  .views-likes-bg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .react-player-bg {
+    height: 450px;
+  }
+}

@@ -1,0 +1,18 @@
+.link {
+  text-decoration: none;
+}
+.route-button {
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .route-button {
+    padding: 0px;
+    margin: 0px;
+  }
+}

@@ -1,0 +1,35 @@
+.input-container {
+  margin-top: 1.5rem;
+}
+.checkbox-container {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.checkbox-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 5px;
+}
+.login-button {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  color: #ffffff;
+  background-color: rgb(64, 64, 218);
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.show-error-mag {
+  color: red;
+}
+
+.form-website-logo {
+  text-align: center;
+  height: 2rem;
+  margin-left: calc(50% - 4rem);
+}

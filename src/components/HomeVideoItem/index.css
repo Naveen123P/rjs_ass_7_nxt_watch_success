@@ -1,0 +1,49 @@
+.thumbnail {
+  width: 100%;
+}
+.profile-title-bg {
+  display: flex;
+  color: wheat;
+  padding: 1rem;
+  align-items: flex-start;
+}
+.profile {
+  height: 50px;
+  margin-right: 1rem;
+}
+.para {
+  color: #94a3b8;
+  font-size: small;
+  font-weight: 500;
+  margin: 7px 5px 0px 0px;
+}
+
+.size-large {
+  font-size: 2rem;
+  margin: 0px;
+  padding-top: 0.6rem;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 576px) {
+  .profile-title-bg {
+    padding: 0%;
+    padding-top: 5px;
+  }
+  .channel-views-pub-bg {
+    padding: 0px;
+    margin: 0px;
+  }
+  .profile {
+    height: 30px;
+  }
+  .sm-flex-wrap {
+    flex-wrap: wrap;
+  }
+  .d-none {
+    display: none;
+  }
+  .f-grow {
+    width: 100%;
+  }
+}
