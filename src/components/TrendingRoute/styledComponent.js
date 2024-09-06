@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 
+export const TrendingBg = styled.div`
+  background-color: ${props => (props.isDark ? '#0f0f0f' : '#f9f9f9')};
+`
 export const TrendHeadBg = styled.div`
   margin-top: 10px;
   margin-bottom: 10px;

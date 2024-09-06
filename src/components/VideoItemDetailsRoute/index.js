@@ -16,10 +16,11 @@ import SideNavigator from '../SideNavigator'
 
 import LoaderView from '../LoaderView'
 import FailureView from '../FailureView'
-import {Body, ContentBg} from '../Home/styledComponent'
+import {Body} from '../Home/styledComponent'
 import {Title} from '../HomeVideoItem/styledComponent'
 import {LikeButton, DislikeButton, SaveButton, CName} from './styledComponent'
 import './index.css'
+import {TrendingBg} from '../TrendingRoute/styledComponent'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -225,7 +226,9 @@ class VideoItemDetailsRoute extends Component {
               <Header />
               <Body isDark={isDark} className="flex-row">
                 <SideNavigator />
-                <ContentBg>{this.renderAllOutputView()}</ContentBg>
+                <TrendingBg isDark={isDark} data-testid="videoItemDetails">
+                  {this.renderAllOutputView()}
+                </TrendingBg>
               </Body>
             </>
           )

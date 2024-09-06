@@ -11,14 +11,14 @@ import LoaderView from '../LoaderView'
 import FailureView from '../FailureView'
 import NoSearchResultView from '../NoSearchResultView'
 
-import {
-  Body,
-  ContentBg,
-  HomeBg,
-  UnHomeVideosList,
-} from '../Home/styledComponent'
+import {Body, HomeBg, UnHomeVideosList} from '../Home/styledComponent'
 
-import {TrendHeadBg, TrendIconBg, TrendHeading} from './styledComponent'
+import {
+  TrendingBg,
+  TrendHeadBg,
+  TrendIconBg,
+  TrendHeading,
+} from './styledComponent'
 import './index.css'
 
 const apiStatusConstants = {
@@ -121,7 +121,7 @@ class TrendingRoute extends Component {
               <Header />
               <Body isDark={isDark} className="flex-row">
                 <SideNavigator />
-                <ContentBg>
+                <TrendingBg isDark={isDark}>
                   <PremiumBox />
                   <HomeBg isDark={isDark}>
                     <TrendHeadBg isDark={isDark}>
@@ -132,7 +132,7 @@ class TrendingRoute extends Component {
                     </TrendHeadBg>
                     {this.renderAllOutputView(isDark)}
                   </HomeBg>
-                </ContentBg>
+                </TrendingBg>
               </Body>
             </>
           )

@@ -5,13 +5,9 @@ import TrendVideoItem from '../TrendVideoItem'
 import Header from '../Header'
 import SideNavigator from '../SideNavigator'
 import PremiumBox from '../PremiumBox'
+import {Body, HomeBg, UnHomeVideosList} from '../Home/styledComponent'
 import {
-  Body,
-  ContentBg,
-  HomeBg,
-  UnHomeVideosList,
-} from '../Home/styledComponent'
-import {
+  TrendingBg,
   TrendHeadBg,
   TrendIconBg,
   TrendHeading,
@@ -55,7 +51,7 @@ const SavedVideosRoute = () => {
             <Header />
             <Body isDark={isDark} className="flex-row">
               <SideNavigator />
-              <ContentBg>
+              <TrendingBg isDark={isDark} data-testid="savedVideos">
                 <PremiumBox />
                 <HomeBg isDark={isDark}>
                   <TrendHeadBg isDark={isDark}>
@@ -70,7 +66,7 @@ const SavedVideosRoute = () => {
                     <>{renderSuccessView(isDark, savedVideos)}</>
                   )}
                 </HomeBg>
-              </ContentBg>
+              </TrendingBg>
             </Body>
           </>
         )

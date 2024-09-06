@@ -10,8 +10,9 @@ import LoaderView from '../LoaderView'
 import FailureView from '../FailureView'
 import GamingVideoItem from '../GamingVideoItem'
 import NoSearchResultView from '../NoSearchResultView'
-import {Body, ContentBg, HomeBg} from '../Home/styledComponent'
+import {Body, HomeBg} from '../Home/styledComponent'
 import {
+  TrendingBg,
   TrendHeadBg,
   TrendIconBg,
   TrendHeading,
@@ -114,9 +115,9 @@ class GamingRoute extends Component {
               <Header />
               <Body isDark={isDark} className="flex-row">
                 <SideNavigator />
-                <ContentBg>
+                <TrendingBg isDark={isDark}>
                   <PremiumBox />
-                  <HomeBg isDark={isDark}>
+                  <HomeBg>
                     <TrendHeadBg isDark={isDark}>
                       <TrendIconBg isDark={isDark}>
                         <FaFire className="fire-icon" />
@@ -125,7 +126,7 @@ class GamingRoute extends Component {
                     </TrendHeadBg>
                     {this.renderAllOutputView(isDark)}
                   </HomeBg>
-                </ContentBg>
+                </TrendingBg>
               </Body>
             </>
           )
