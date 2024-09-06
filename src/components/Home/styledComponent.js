@@ -6,10 +6,10 @@ export const Body = styled.div`
 `
 
 export const ContentBg = styled.div`
+  background-color: ${props => (props.isDark ? '#181818' : '#f9f9f9')}
   align-self: flex-start;
   height: calc(100vh - 4.4rem);
   overflow-y: scroll;
-  background-color: ${props => (props.isDark ? '#181818' : '#f9f9f9')}
   width: 100%;
   ::-webkit-scrollbar {
     width: 0;

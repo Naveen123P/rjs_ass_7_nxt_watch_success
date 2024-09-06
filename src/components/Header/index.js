@@ -3,7 +3,7 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Popup from 'reactjs-popup'
 import {MdLightbulbOutline} from 'react-icons/md'
-import {IoMdMoon} from 'react-icons/io'
+import {IoMdMoon, IoIosClose} from 'react-icons/io'
 import {IoReorderThreeSharp} from 'react-icons/io5'
 import {FiLogOut} from 'react-icons/fi'
 
@@ -63,6 +63,7 @@ class Header extends Component {
           <FiLogOut />{' '}
         </MobileButton>
       }
+      className="popup-content"
       //   position="right-bottom"
     >
       {close => (
@@ -81,19 +82,37 @@ class Header extends Component {
     </Popup>
   )
 
-  renderNavigationView = isDark => (
-    <Popup
-      model
-      trigger={
-        <Button isDark={isDark} type="button">
-          <IoReorderThreeSharp />{' '}
-        </Button>
-      }
-      position="bottom"
-    >
-      <RouteNavigationList dummy="dummy" />
-    </Popup>
-  )
+  renderNavigationView = isDark => {
+    const closeColor = isDark ? 'lightText' : 'darkText'
+    const modalBg = isDark ? 'darkBg' : 'lightBg'
+
+    return (
+      <Popup
+        modal
+        trigger={
+          <Button isDark={isDark} type="button">
+            <IoReorderThreeSharp />{' '}
+          </Button>
+        }
+        className={modalBg}
+        position="bottom"
+      >
+        {close => (
+          <div className={modalBg}>
+            <button
+              data-testId="close"
+              className={`close-button margin-left ${closeColor}`}
+              type="button"
+              onClick={() => close()}
+            >
+              <IoIosClose />{' '}
+            </button>
+            <RouteNavigationList dummy="dummy" />
+          </div>
+        )}
+      </Popup>
+    )
+  }
 
   renderThemItem = (isDark, changeThem) => {
     const onChangeThem = () => {

@@ -23,8 +23,8 @@ const HomeVideoItem = props => {
       {value => {
         const {isDark} = value
         return (
-          <Link to={`/videos/${id}`} className="link">
-            <VideoItem isDark={isDark}>
+          <VideoItem isDark={isDark}>
+            <Link to={`/videos/${id}`} className="link">
               <img
                 src={thumbnailUrl}
                 alt="video thumbnail"
@@ -49,8 +49,8 @@ const HomeVideoItem = props => {
                   </div>
                 </div>
               </div>
-            </VideoItem>
-          </Link>
+            </Link>
+          </VideoItem>
         )
       }}
     </ThemContext.Consumer>

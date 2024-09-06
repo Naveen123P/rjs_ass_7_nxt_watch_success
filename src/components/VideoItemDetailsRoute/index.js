@@ -4,11 +4,12 @@ import ReactPlayer from 'react-player'
 import {formatDistanceToNow} from 'date-fns'
 import {BsDot} from 'react-icons/bs'
 
-// import { GrLike } from "react-icons/gr";
+// import {GrLike} from 'react-icons/gr'
 
 // import { GrLike } from "react-icons/gr";
+// import {BiLike} from 'react-icons/bi'
 
-import {BiListPlus} from 'react-icons/bi'
+import {BiListPlus, BiLike, BiDislike} from 'react-icons/bi'
 
 import ThemContext from '../../context/ThemContext'
 import Header from '../Header'
@@ -159,7 +160,8 @@ class VideoItemDetailsRoute extends Component {
                       type="button"
                       onClick={onClickLike}
                     >
-                      Like{/* <GrLike /> Like */}
+                      Like
+                      <BiLike />
                     </LikeButton>
                     <DislikeButton
                       isDisliked={isDisliked}
@@ -167,7 +169,8 @@ class VideoItemDetailsRoute extends Component {
                       type="button"
                       onClick={onClickDislike}
                     >
-                      Dislike{/* <SlDislike /> Dislike */}
+                      <BiDislike />
+                      Dislike
                     </DislikeButton>
                     <SaveButton
                       like

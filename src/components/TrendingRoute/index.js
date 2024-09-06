@@ -121,7 +121,7 @@ class TrendingRoute extends Component {
               <Header />
               <Body isDark={isDark} className="flex-row">
                 <SideNavigator />
-                <TrendingBg isDark={isDark}>
+                <TrendingBg isDark={isDark} data-testid="trending">
                   <PremiumBox />
                   <HomeBg isDark={isDark}>
                     <TrendHeadBg isDark={isDark}>

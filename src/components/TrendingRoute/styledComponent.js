@@ -2,6 +2,17 @@ import styled from 'styled-components'
 
 export const TrendingBg = styled.div`
   background-color: ${props => (props.isDark ? '#0f0f0f' : '#f9f9f9')};
+  align-self: flex-start;
+  height: calc(100vh - 4.4rem);
+  overflow-y: scroll;
+  width: 100%;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  @media screen and (min-width: 768px) {
+    width: 80%;
+    height: calc(100vh - 6rem);
+  }
 `
 export const TrendHeadBg = styled.div`
   margin-top: 10px;

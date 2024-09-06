@@ -11,6 +11,31 @@
 .desktop-logout {
   display: none;
 }
+.margin-left {
+  margin-left: calc(100% - 2.3rem);
+}
+.popup-content {
+  padding: 20px; /* Padding inside the popup */
+  border-radius: 10px; /* Rounded corners */
+  min-width: 100px; /* Width of the popup */
+  max-width: 100%; /* Ensures it doesn't overflow on small screens */
+  position: relative; /* For positioning inside the popup */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Controls the glow/shadow beneath the popup */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.lightText {
+  color: #ffffff;
+}
+.darkTest {
+  color: #000000;
+}
+.lightBg {
+  background-color: #f4f4f4;
+}
+.darkBg {
+  background-color: #313131;
+}
 
 @media screen and (min-width: 768px) {
   .mobile-popup-navigation {
